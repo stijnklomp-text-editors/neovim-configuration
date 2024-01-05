@@ -1,7 +1,7 @@
 # Neovim configuration
 
-![GitHub](https://img.shields.io/github/license/stijnklomp/NeoVim_Configuration?style=flat)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/stijnklomp/NeoVim_Configuration)
+![GitHub](https://img.shields.io/github/license/stijnklomp-text-editors/neovim?style=flat)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/stijnklomp-text-editors/neovim)
 ![OS](https://img.shields.io/badge/OS-Linux%20%2F%20Windows%20%2F%20macOS-blue)
 
 My personal neovim configuration.
