@@ -8,35 +8,6 @@ My personal neovim configuration.
 
 ### Getting setup
 
-##### Prerequisites
-Neovim requires **win32 yank** to be installed to work with the **Windows clipboard**:
-
-```bash
-curl -slo/tmp/win32yank.zip https://github.com/equalsraf/win32yank/releases/download/v0.0.4/win32yank-x64.zip
-unzip -p /tmp/win32yank.zip win32yank.exe > /tmp/win32yank.exe
-chmod +x /tmp/win32yank.exe
-sudo mv /tmp/win32yank.exe /usr/local/bin/
-```
-
-Clipboard **settings** for **Windows clipboard** in `~/.config/nvim/init.lua`:
-
-```lua
-opt.clipboard="unnamedplus"
-
-vim.g.clipboard = {
-    name = "win32yank-wsl",
-    copy = {
-        ["+"] = "win32yank.exe -i --crlf",
-        [""] = "win32yank.exe -i --crlf"
-    },
-    paste = {
-        ["+"] = "win32yank.exe -o --crlf",
-        [""] = "win32yank.exe -o --crlf"
-    },
-    cache_enable = 0,
-}
-```
-
 ##### Install Neovim
 1. Install [Neovim](https://github.com/neovim/neovim/releases/tag/stable)
 	*AppImage installation recommended*
@@ -48,14 +19,6 @@ vim.g.clipboard = {
 export EDITOR="~/squashfs-root/usr/bin/nvim"
 alias nvim="~/squashfs-root/usr/bin/nvim"
 ```
-4. Install [Packer](https://github.com/wbthomason/packer.nvim#quickstart) for package/plugin management
-
-```bash
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
-~/.local/share/nvim/site/pack/packer/start/packer.nvim
-
-```
-5. Open Neovim from terminal `nvim` and run packersync `<cmd>:PackerSync</cmd>`
 
 ##### Get Ripgrep plugin working (for Telescope plugin)
 1. Install Rust to compile Ripgrep
