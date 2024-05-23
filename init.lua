@@ -1,6 +1,6 @@
 require("stijn.remap")
 require("stijn.keymap")
-require("stijn.packer")
+require("stijn.lazy")
 
 -------------------------------------------------------------------------------------
 -- General settings
@@ -39,23 +39,6 @@ opt.colorcolumn="120"
 --inoremap <leader>date <C-R>=strftime("!%Y-%m-$d T%H:%M:%SZ")<CR>
 --inoremap <leader>ISOd <C-R>lua require'dates'.ISODate()<CR>
 --inoremap <leader>date <C-R>lua require("dates").UTC_ISO_DATE()
-
--------------------------------------------------------------------------------------
--- Clip board for WSL on Windows
--------------------------------------------------------------------------------------
-
-vim.g.clipboard = {
-  name = "win32yank-wsl",
-  copy = {
-    ["+"] = "win32yank.exe -i --crlf",
-    [""] = "win32yank.exe -i --crlf"
-  },
-  paste = {
-    ["+"] = "win32yank.exe -o --crlf",
-    [""] = "win32yank.exe -o --crlf"
-  },
-  cache_enable = 0,
-}
 
 -------------------------------------------------------------------------------------
 -- Text format options
